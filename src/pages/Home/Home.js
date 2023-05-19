@@ -9,7 +9,7 @@ function Home() {
     const [popularMovies,setPopularMovies]=useState([])
 
     useEffect(()=>{
-        fetch('https://api.themoviedb.org/3/movie/popular?api_key=b66e6fd89ccfd1d6a73935aba37f7cfc&language=en-US')
+        fetch('http://api.themoviedb.org/3/movie/popular?api_key=b66e6fd89ccfd1d6a73935aba37f7cfc&language=en-US')
         .then(res=>res.json())
         .then(data=>setPopularMovies(data.results))
     },[])
